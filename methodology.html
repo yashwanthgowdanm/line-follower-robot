@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology - Line Follower AGV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="site-title">Line Follower AGV Project</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="introduction.html" class="nav-link">Introduction</a></li>
+                    <li><a href="methodology.html" class="nav-link active">Methodology</a></li>
+                    <li><a href="working_principle.html" class="nav-link">Working Principle</a></li>
+                    <li><a href="applications.html" class="nav-link">Applications</a></li>
+                    <li><a href="results_conclusion.html" class="nav-link">Results & Conclusion</a></li>
+                    <li><a href="references.html" class="nav-link">References</a></li>
+                    <li><a href="images_videos.html" class="nav-link">Images & Videos</a></li> </ul>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="report-section">
+            <div class="container">
+                <h2 class="section-title">Methodology and System Design</h2>
+
+                <div class="report-block">
+                    <h3>3. Methodology and System Design</h3>
+                    <p>The methodology involved a systematic approach encompassing component selection, detailed circuit design, and the iterative development and refinement of the control algorithm. This section details the components and the operational principles of the AGV.</p>
+
+                    <h4>3.1 Components of the Robot</h4>
+                    <ul>
+                        <li><strong>3.1.1 Arduino Uno Microcontroller:</strong> Serving as the central processing unit, the Arduino Uno is responsible for interpreting sensor data, executing the line-following algorithm, and generating control signals for the motors. Its ease of programming and robust community support made it an ideal choice.</li>
+                        <li><strong>3.1.2 L293D Motor Driver IC:</strong> This integrated circuit is crucial for controlling the direction and speed of the DC motors. The Arduino itself cannot supply sufficient current to directly drive the motors, making the L293D an essential interface, providing the necessary power amplification and enabling bidirectional motor control.</li>
+                        <li><strong>3.1.3 IR Sensors:</strong> These are the primary sensing elements for line detection. Typically, an array of multiple IR sensor pairs (each consisting of an infrared emitting diode and a phototransistor receiver) is strategically placed at the front underside of the robot. These sensors continuously emit IR light; a white surface reflects the light back to the receiver, while a black line absorbs it. By comparing the output from these sensors, the robot determines its position relative to the line (on the line, veering left, or veering right).</li>
+                        <li><strong>3.1.4 BO Motors:</strong> Geared DC motors (often referred to as BO motors due to their body shape) provide the necessary torque to drive the wheels of the robot. The gearing mechanism ensures sufficient power to move the AGV smoothly and maintain control, especially during turns.</li>
+                    </ul>
+
+                    <h4>3.2 Circuit Design and Overall System Flow</h4>
+                    <p>The circuit design involved meticulously connecting the Arduino, L293D motor driver, IR sensors, and BO motors. Power distribution was carefully planned to ensure stable operation of all components. The overall system flowchart illustrates the logical sequence of operations: the AGV powers on, continuously reads data from its IR sensor array, processes this data through the Arduino's programmed algorithm, and then adjusts the motor speeds and directions via the L293D driver to correct its path and stay on the line. This forms a continuous feedback loop.</p>
+                </div>
+
+                <div class="report-block">
+                    <h3>4. Methodology Refinement and Optimization (Phase 2 Enhancements)</h3>
+                    <p>Building upon the foundational work of Phase 1, Phase 2 focused on refining the AGV's capabilities to achieve improved performance, robustness, and practical applicability. This involved iterative enhancements across hardware and software aspects:</p>
+                    <ul>
+                        <li><strong>Advanced Circuit Design:</strong> Optimization of the electrical connections between the Arduino Uno, L293D Motor Driver IC, and IR sensors was undertaken. This included considerations for minimizing electrical noise, ensuring stable power delivery to all components, and potentially incorporating decoupling capacitors for cleaner signals. The goal was to achieve better signal integrity and overall power efficiency, leading to more reliable operation.</li>
+                        <li><strong>Enhanced Sensor Placement and Calibration:</strong> Extensive experimentation was conducted with different physical configurations and placements of the IR sensor array. This aimed to improve line detection accuracy, particularly when navigating curves and complex intersections. Refined calibration procedures were developed to ensure consistent and reliable sensor readings across varying ambient lighting conditions, making the AGV more adaptable to different environments.</li>
+                        <li><strong>Algorithm Optimization:</strong> The control algorithms were significantly enhanced to handle more complex line patterns, sharper turns, and potential environmental disruptions. This involved exploring and implementing more sophisticated control strategies, such as a basic form of Proportional-Integral-Derivative (PID) control, to achieve smoother, more precise, and faster movements. The optimized algorithm minimized oscillations and improved the AGV's ability to maintain its path.</li>
+                        <li><strong>Mechanical Design Improvements:</strong> Minor but crucial adjustments were made to the physical structure of the AGV. This included optimizing the placement of components for better weight distribution, selecting appropriate wheels for enhanced traction, and refining the chassis design to ensure overall stability during movement. These mechanical improvements contributed to the AGV's improved maneuverability and reduced instances of tipping or instability.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2021-2022 Microcontroller Based Line Follower AGV Project. All rights reserved.</p>
+            <p>Guided by: Dr. C Suresh & Mrs. Sahana Reddy</p>
+            <p>Bangalore Institute of Technology</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

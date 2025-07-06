@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - Line Follower AGV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="site-title">Line Follower AGV Project</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="introduction.html" class="nav-link active">Introduction</a></li>
+                    <li><a href="methodology.html" class="nav-link">Methodology</a></li>
+                    <li><a href="working_principle.html" class="nav-link">Working Principle</a></li>
+                    <li><a href="applications.html" class="nav-link">Applications</a></li>
+                    <li><a href="results_conclusion.html" class="nav-link">Results & Conclusion</a></li>
+                    <li><a href="references.html" class="nav-link">References</a></li>
+                    <li><a href="images_videos.html" class="nav-link">Images & Videos</a></li> </ul>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="report-section">
+            <div class="container">
+                <h2 class="section-title">Introduction to the Project</h2>
+
+                <div class="report-block">
+                    <h3>1. Introduction to Microcontroller Robots and Project Overview</h3>
+                    <p>A robot is a machine designed to reduce human effort and increase comfort, especially in hazardous environments. Robotics offers high performance, accuracy, and lower labor costs. Our project focuses on developing an autonomous Line Following Robot, an AGV (Automated Guided Vehicle), capable of precisely tracking a black line on a contrasting white surface. It utilizes IR optical sensors to identify the line, ensuring accurate movement. The Arduino Uno microcontroller serves as the brain, controlling motor speed and steering, with the aim of achieving optimal performance through proper tuning of control parameters. The robot is designed to follow lines, navigate various turns, and be resilient to environmental factors like ambient lighting and noise. This report details the journey from initial conceptualization and literature review to the refined implementation, advanced methodologies, and comprehensive results of our Line Follower AGV.</p>
+                </div>
+
+                <div class="report-block">
+                    <h3>1.2 Problem Definition</h3>
+                    <p>In modern industries, efficient transportation of products between different manufacturing units is crucial. Traditional methods, such as human-driven carts, are often unreliable, prone to errors, and labor-intensive. This project addresses these challenges by automating the transportation process using line-following AGVs. This offers a cost-effective, convenient, and highly reliable alternative to laying expensive and inflexible railway tracks within industrial facilities. Beyond industrial applications, line following technology is fundamental in various fields of industrial automation and robotics. A significant potential application is in automated valet parking systems, which could effectively address urban traffic congestion, optimize parking space utilization, and significantly reduce minor accidents in parking areas.</p>
+                </div>
+
+                <div class="report-block">
+                    <h3>2. Literature Review and Project Objectives</h3>
+                    <p>The literature review explored various approaches and existing solutions for line-following robots, providing a foundational understanding for our project. Key insights were drawn from:</p>
+                    <ul>
+                        <li><strong>Md Younus et al. (2019):</strong> Emphasized the critical role of Infrared Ray (IR) sensors in determining the line's position relative to the robot. Their work highlighted that IR sensors are widely adopted due to their effectiveness in sensing operations where white surfaces reflect infrared light and black lines absorb it, creating a clear contrast for detection.</li>
+                        <li><strong>Ebiesuwa O. O. et al. (2013):</strong> Provided valuable insights into the methodology for preparing robotic models and their early applications. This research underscored the working principle of optical sensors, typically mounted at the front of the robot, often utilizing optocouplers (a combination of IR emitting diodes and photo transistors) to accurately capture the line's position.</li>
+                        <li><strong>J. Warren, J. Adams, and H. Molle (2014):</strong> Their work "Arduino for Robotics" served as a practical guide, offering foundational knowledge on integrating Arduino with robotic systems, particularly relevant for motor control and sensor interfacing.</li>
+                        <li><strong>Md Takiul Hasan Sakib:</strong> Further discussed the principles and basic functionalities of line-following robots, reinforcing the core concepts.</li>
+                        <li><strong>Khin Khin Saw, Lae Yin Mon:</strong> Contributed to understanding the design and construction aspects of Arduino-based line-following robots.</li>
+                    </ul>
+                    <p>The research gap identified was the need for more robust control algorithms and improved sensor integration to enhance the robot's performance in varying environmental conditions and complex line patterns, leading to the objectives of our study.</p>
+
+                    <h4>2.2 Objectives of the Present Study</h4>
+                    <p>The primary objectives guiding the development of this AGV throughout both project phases were:</p>
+                    <ul>
+                        <li>To design and construct a functional prototype of a microcontroller-based line follower AGV using the Arduino platform.</li>
+                        <li>To implement and refine an efficient algorithm for accurate line tracking, ensuring precise navigation along the designated path.</li>
+                        <li>To optimize the robot's performance by fine-tuning control parameters for both speed and steering, aiming for smooth and responsive movement.</li>
+                        <li>To ensure the robot's resilience and insensitivity to external environmental factors, such as variations in ambient lighting and background noise, maintaining consistent operation.</li>
+                        <li>To demonstrate the practical applicability and potential of the line follower AGV in real-world scenarios, particularly in industrial automation and other relevant fields requiring automated transport.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2021-2022 Microcontroller Based Line Follower AGV Project. All rights reserved.</p>
+            <p>Guided by: Dr. C Suresh & Mrs. Sahana Reddy</p>
+            <p>Bangalore Institute of Technology</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working Principle - Line Follower AGV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="site-title">Line Follower AGV Project</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="introduction.html" class="nav-link">Introduction</a></li>
+                    <li><a href="methodology.html" class="nav-link">Methodology</a></li>
+                    <li><a href="working_principle.html" class="nav-link active">Working Principle</a></li>
+                    <li><a href="applications.html" class="nav-link">Applications</a></li>
+                    <li><a href="results_conclusion.html" class="nav-link">Results & Conclusion</a></li>
+                    <li><a href="references.html" class="nav-link">References</a></li>
+                    <li><a href="images_videos.html" class="nav-link">Images & Videos</a></li> </ul>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="report-section">
+            <div class="container">
+                <h2 class="section-title">Working Principle of the Line Follower AGV</h2>
+
+                <div class="report-block">
+                    <h3>3.3 Working Principle of Line Following AGV (Detailed)</h3>
+                    <p>The AGV's operation is based on a dynamic feedback control system. The array of IR sensors constantly monitors the surface beneath the robot. When the AGV is perfectly centered on the black line, all sensors (or specific combinations depending on the array configuration) will register the presence of the line. If the AGV deviates, say, to the left, the sensors on the left side will detect the white surface, while those on the right might still be over the black line. The Arduino interprets this differential input.</p>
+                    <p>Based on this interpretation, the Arduino sends precise control signals to the L293D motor driver. For example, if the AGV drifts left, the Arduino might instruct the left motor to slow down or even reverse slightly, while the right motor continues forward, causing the AGV to steer right and return to the line. Conversely, if it drifts right, the right motor's speed would be adjusted similarly. This continuous monitoring and adjustment ensure the AGV maintains its trajectory along the line.</p>
+                    <p>Further enhancements in Phase 2 included implementing logic for:</p>
+                    <ul>
+                        <li><strong>Intersection Handling:</strong> Programming the AGV to recognize and make specific turns at intersections (e.g., T-junctions, cross-junctions) based on pre-defined patterns or programmed decision rules. This allows for navigation on more complex paths.</li>
+                        <li><strong>Robust Error Correction:</strong> Implementing more resilient error handling routines to prevent the AGV from completely losing the line, even in challenging conditions. This includes recovery mechanisms to search for the line if it's momentarily lost and re-establish tracking.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2021-2022 Microcontroller Based Line Follower AGV Project. All rights reserved.</p>
+            <p>Guided by: Dr. C Suresh & Mrs. Sahana Reddy</p>
+            <p>Bangalore Institute of Technology</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
